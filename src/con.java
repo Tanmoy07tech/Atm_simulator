@@ -6,8 +6,9 @@ public class con{
 	public con(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-		Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/project6","root","dbms123");
-			
+		c=DriverManager.getConnection("jdbc:mysql://localhost:3306/project6","root","dbms123");
+        s=c.createStatement();
+        
 		}catch(Exception e) {
 			System.out.println(e);
 		}
